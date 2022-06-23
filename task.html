@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="https://cdn.ckeditor.com/4.19.0/standard-all/ckeditor.js"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600;400;700&display=swap" rel="stylesheet">
+
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-attachment: fixed;
+    background-image: url('./img/medicine.svg');
+    
+}
+
+#wrapperDiv{
+    color:#654b9b;
+    font-weight: bold;
+    background-color: #bab3c9;
+    backdrop-filter: blur(1px);
+    font-family: 'Poppins', sans-serif;
+  }
+
+    
+label 
+{
+    font-size: large;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.form-check-label{
+    color: #e98371;
+    font-weight: lighter;
+    text-align: left;
+}
+#div1 img{
+    height: 100px;
+}
+.inner { padding: 80px 20px; }
+
+div#container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#container section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 960px;
+    margin: 30px 0;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 30px;
+    overflow: hidden;
+    backdrop-filter: blur(2px);
+    text-align: center;
+   
+}
+
+
+
+
+
+
+
+
+
+form {
+    width: 80%;
+    max-width: 2500px;
+    margin: 50px auto 0 auto;
+}
+
+form input[type=number],
+form input[type=text],
+form input[type=button]
+    {
+    width: calc(100% - 55px);
+    border: none;
+    padding: 10px 15px 8px 40px;
+    margin: 8px 0;
+    font-size: 18px;
+    border-radius: 20px;
+    background-position: 4% 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+}
+form input[type=radio]{
+    float: left;
+}
+
+
+
+ 
+  
+  .wrapper {
+    width:650px
+  }
+  
+  
+  input:focus {
+    outline: none;
+  }
+
+  button{
+   
+    border: none;
+    background: none;
+    top: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    padding: 0;
+    width: 50px;
+  }
+.btn-group{
+    
+   width:450px;
+    
+}
+  button:focus {
+    outline: none;
+  }
+  
+  
+  .results {
+    padding: 0px;
+  }
+  
+  .results ul {margin: 0; padding: 0; }
+  .results ul li {
+    list-style: none;
+    border-radius: 3px;
+    opacity: 0;
+    display: none;
+    padding: 8px 12px;
+    transition: all .5s linear;
+  }
+  
+  .show .results ul li {
+    opacity: 1;
+    display: block;
+  }
+  
+  .show .results {
+    padding: 10px;
+  }
+  
+  
+
+
+
+
+
+
+#myInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+    }
+    
+    #myTable {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 18px;
+    }
+    
+    #myTable th, #myTable td {
+    text-align: left;
+    padding: 12px;
+    }
+    
+    #myTable tr {
+    border-bottom: 1px solid #ddd;
+    }
+    
+    #myTable tr.header, #myTable tr:hover {
+    background-color: #f1f1f1;
+    }
+
+
+
+@media(max-width: 760px)  {
+    div#container section {
+        flex-flow: column;
+    }
+
+    div#container section article,
+    div#container section aside {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+ <div id="container">
+<section>
+     
+        <div id="wrapperDiv">
+            <div id="div1" style="padding: 20px;float:left">
+                <img src="img/propic.svg">
+            </div>
+            <div id="div2" style="padding:10px;float:left">
+                <B> Jhon Mark Labadia</B> <br/>
+                    M, 19-02-1993 / 26 Y 12 M 6D <br/><br/>
+                    <hr>
+                    MRN: 24 <BR/>
+                    PVR:6565632 <br/><br/>
+                    <hr>
+                    Insurance <br/>
+                25-03-2020 14:00
+            </div>
+           
+        </div>
+                
+   
+    
+    
+     
+            
+    <div class="inner">
+            <form action="" method="post">
+                <input type="number" placeholder="Temperature in degree Celcius" /> 
+                <input type="number" placeholder="Pulse per minute" />
+                <input type="number"placeholder="R.R per minute" />
+                <input type="number" placeholder="Systolic in mmHg" />
+                <input type="number" placeholder="Diastolic in mmHg" />
+                <input type="number" placeholder=" O2SAT in %" />
+               <input type="number" placeholder="A.G in cm" />    
+                <input type="number" placeholder="Height in cm" />
+                <input type="number"placeholder="Weight kg" /> <br>
+                
+                <label style=" color:#746d6d;font-family: 'Poppins', sans-serif;">Chief complaints & History of present illness</label>
+                
+                <textarea cols="80" id="editor1" name="editor1" rows="10"></textarea>
+            <br>   
+                    
+                    
+                    <label style=" color:#857d7d;font-family: 'Poppins', sans-serif;" for="countries">Choose your Nationality:</label>
+                   <select id="countries" name="countries"></select>
+
+                    <div title="Allergies">
+                        <label style=" color:#857d7d;font-family: 'Poppins', sans-serif;">Allergies</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="show" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            Yes
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="hide" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="hide" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            Not Known
+                        </label>
+                        </div>
+                        <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="hide" >
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            No Changes
+                        </label>
+                        </div>
+                        </div>
+
+                        <br>
+                        <div id="box">
+                        <div class="btn-group">
+                            <button type="button" onclick="onSelect" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                            Allergy Type
+                            </button>
+                            <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Food Allergy</a></li>
+                            <li><a class="dropdown-item" href="#">Dust Allergy</a></li>
+                            <li><a class="dropdown-item" href="#">Insect Allergy</a></li>
+                            <li><a class="dropdown-item" href="#">Drug Allergy</a></li>
+                            </ul>
+                        </div> <br> <br>
+
+
+                        <div class="container">
+                            <div class="wrapper">
+                              <input type="text" name="search" id="search" placeholder="Search Allergies" autocomplete="chrome-off">
+                              <button><i class="fa fa-search"></i></button>
+                              <div class="results">
+                                <ul>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+
+
+
+    <div class="add">
+    <input type="text" name="text" id="txt"  placeholder="Kind of reaction">
+    <button  class="btn-list">
+        <i  class="fa fa-plus" aria-hidden="true"></i>
+    </button>
+</div>
+    <div class="Reaction">
+        <ul>
+            
+        </ul>
+    </div></div>
+                    
+
+
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search ICDs" title="">
+
+<table id="myTable">
+<tr class="header">
+<th style="width:60%;">ICD Code</th>
+<th style="width:40%;">Description</th>
+<th style="width:60%;">Primary / Secondary</th>
+<th style="width:40%;">Provisional / Final</th>
+</tr>
+<tr>
+<td>E55.9</td>
+<td>Vitamin D deficiency</td>
+<td>Secondary</td>
+<td>Provisinal</td>
+</tr>
+<tr>
+<td>R05</td>
+<td>Cough</td>
+
+<td>Secondary</td>
+<td>Final</td>
+</tr>
+<tr>
+<td>R52</td>
+<td>Pain</td>
+
+<td>Secondary</td>
+<td>Final</td>
+</tr>
+<tr>
+<td>R51</td>
+<td>Headache</td>
+
+<td>Secondary</td>
+<td>Final</td>
+</tr>
+<tr>
+<td>E78.0</td>
+<td>Pure hypercholestrolemia</td>
+
+<td>Secondary</td>
+<<td>Provisinal</td>
+</tr>
+
+</table>
+
+    
+
+   
+                        
+  </form>
+ </div>
+        
+</section>
+</div>   
+    
+        
+
+<script>
+CKEDITOR.replace('editor1', {
+fullPage: true,
+extraPlugins: 'docprops',
+
+allowedContent: true,
+height: 320,
+removeButtons: 'PasteFromWord'
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const selectDrop = document.querySelector('#countries');
+    // const selectDrop = document.getElementById('countries');
+  
+  
+    fetch('https://restcountries.com/v3.1/all').then(res => {
+      return res.json();
+    }).then(data => {
+      let output = "";
+      data.forEach(country => {
+        output += `
+        
+        <option value="${country.name}">${country.name}</option>`;
+      })
+  
+      selectDrop.innerHTML = output;
+    }).catch(err => {
+      console.log(err);
+    })
+  
+  
+  });
+
+
+
+
+
+
+const inputText = document.querySelector('#txt');
+const myButton = document.querySelector('.btn-list');
+const list = document.querySelector('.Reaction ul');
+myButton.addEventListener('click', (e)=>{
+if(inputText.value != ""){
+e.preventDefault();
+const myLi = document.createElement('li');
+myLi.innerHTML = inputText.value;
+list.appendChild(myLi);
+}
+
+});
+
+
+
+let searchable = [
+  'Shell fish',
+  'Dust',
+  
+];
+
+const searchInput = document.getElementById('search');
+const searchWrapper = document.querySelector('.wrapper');
+const resultsWrapper = document.querySelector('.results');
+
+searchInput.addEventListener('keyup', () => {
+  let results = [];
+  let input = searchInput.value;
+  if (input.length) {
+    results = searchable.filter((item) => {
+      return item.toLowerCase().includes(input.toLowerCase());
+    });
+  }
+  renderResults(results);
+});
+
+function renderResults(results) {
+  if (!results.length) {
+    return searchWrapper.classList.remove('show');
+  }
+
+  const content = results
+    .map((item) => {
+      return `<li>${item}</li>`;
+    })
+    .join('');
+
+  searchWrapper.classList.add('show');
+  resultsWrapper.innerHTML = `<ul>${content}</ul>`;
+}
+
+
+
+
+
+
+function myFunction() {
+var input, filter, table, tr, td, i, txtValue;
+input = document.getElementById("myInput");
+filter = input.value.toUpperCase();
+table = document.getElementById("myTable");
+tr = table.getElementsByTagName("tr");
+for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+    txtValue = td.textContent || td.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+    } else {
+        tr[i].style.display = "none";
+    }
+    }       
+}
+}
+
+
+const box = document.getElementById('box');
+
+function handleRadioClick() {
+if (document.getElementById('show').checked) {
+box.style.display = 'block';
+} else {
+box.style.display = 'none';
+}
+}
+
+const radioButtons = document.querySelectorAll('input[name="flexRadioDefault"]');
+radioButtons.forEach(radio => {
+radio.addEventListener('click', handleRadioClick);
+});
+</script>
+</body>
+</html>
